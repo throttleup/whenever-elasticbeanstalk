@@ -38,7 +38,7 @@ leader_instances = ec2.instances.to_a.inject([]) do |m, i|
 end
 
 if leader_instances.count < 1
-  `/usr/local/bin/bundle exec create_cron_leader`
+  `bundle exec create_cron_leader`
 elsif leader_instances.count > 1 && leader_instances.include?(instance_id)
-  `/usr/local/bin/bundle exec create_cron_leader`
+  `bundle exec create_cron_leader`
 end

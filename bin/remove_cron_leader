@@ -41,4 +41,4 @@ if leader_instances.count > 1 && leader_instances.include?(instance_id)
 	ec2.instances[instance_id].tags["leader"] = "false"
 end
 
-`/usr/local/bin/bundle exec setup_cron`
+`bundle exec setup_cron`

@@ -63,5 +63,5 @@ if leader_instances.count < 1
 end
 
 unless options[:no_update]
-	`/usr/local/bin/bundle exec setup_cron`
+	`bundle exec setup_cron`
 end
